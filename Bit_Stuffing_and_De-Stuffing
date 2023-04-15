@@ -1,0 +1,54 @@
+#include<iostream>
+using namespace std;
+int main(){
+   int n,j=0,c=0;
+   cin>>n;
+   int s[n],d[50];
+   for(int i=0; i<n; i++){
+       cin>>s[i];
+   }
+   int i=0;
+   while(i<n){
+       d[j]=s[i];
+       if(s[i]==1){
+           c++;
+       }
+       else{
+           c=0;
+       }
+       if(c==5){
+           j++;
+           d[j]=0;
+       }
+       i++;
+       j++;
+   }
+   cout<<"After stuffing :" ;
+   for(int i=0; i<j; i++){
+       cout<<d[i]<<" ";
+   }
+   cout<<endl;
+
+
+   int k=0,l=0,m=0;
+   while(k<n){
+       d[l]=s[k];
+       if(s[k]==1){
+           m++;
+       }
+       else{
+           m=0;
+       }
+       if(m==5){
+           k++;
+       }
+       l++;
+       k++;
+   }
+   cout<<"After De_Stuffing :" ;
+   for(int k=0; k<l; k++){
+       cout<<d[k]<<" ";
+   }
+   cout<<endl;
+   return 0;
+}
